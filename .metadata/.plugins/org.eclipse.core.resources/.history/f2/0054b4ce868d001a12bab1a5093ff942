@@ -1,0 +1,5 @@
+package com.cms.application.cms;
+
+public class CategoryNotFoundException extends RuntimeException {
+
+}

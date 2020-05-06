@@ -1,0 +1,11 @@
+package com.cms.application.cms.exception;
+
+public class NewsNotFoundException extends RuntimeException {
+	
+	private final String id;
+	
+	public NewsNotFoundException(String id) {
+		this.id=id;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.cms.application.cms.exception;
+
+public class NewsNotFoundException extends RuntimeException {
+
+}

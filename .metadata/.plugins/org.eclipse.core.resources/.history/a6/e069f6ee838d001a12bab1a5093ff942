@@ -1,0 +1,10 @@
+package com.cms.application.cms.repository;
+
+import org.springframework.stereotype.Service;
+
+import com.cms.application.cms.models.Category;
+
+@Service
+public class CategoryRepository extends JpaRepository<Category> {
+
+}

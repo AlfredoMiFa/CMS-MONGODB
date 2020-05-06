@@ -1,0 +1,24 @@
+package com.cms.dbmongo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.cms.dbmongo.models.Category;
+import com.cms.dbmongo.repository.CategoryRepository;
+import com.cms.dbmongo.vo.CategoryRequest;
+
+@Service
+public class CategoryService {
+	
+	private final CategoryRepository categoryRepository;
+	
+	public CategoryService(CategoryRepository categoryRepository) {
+		this.categoryRepository = categoryRepository;
+	}
+	
+	public Category create(CategoryRequest request) {
+		Category category = new Category();
+		category.setName(request.getName());
+		return this.categoryRepository.save(category);
+	}
+	
+}

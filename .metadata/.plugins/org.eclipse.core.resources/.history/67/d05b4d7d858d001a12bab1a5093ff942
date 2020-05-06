@@ -1,0 +1,46 @@
+package com.cms.application.cms.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cms.application.cms.models.Category;
+import com.cms.application.cms.repository.CategoryRepository;
+import com.cms.application.cms.vo.CategoryRequest;
+
+@Service
+@Transactional(readOnly = true)
+public class CategoryService {
+	
+	  private final CategoryRepository categoryRepository;
+
+	  public CategoryService(CategoryRepository categoryRepository) {
+	    this.categoryRepository = categoryRepository;
+	  }
+	  
+	  @Transactional
+	  public Category update(Category category){
+	    return this.categoryRepository.save(category);
+	  }
+
+	  public Category create(CategoryRequest request){
+	    Category category = new Category();
+	    category.setName(request.getName());
+	    return this.categoryRepository.save(category);
+	  }
+
+	  public void delete(String id){
+	    final Category category = this.categoryRepository.findOne(id);
+	    this.categoryRepository.delete(category);
+	  }
+
+	  public List<Category> findAll(){
+	    return this.categoryRepository.findAll();
+	  }
+
+	  public Category findOne(String id){
+	    return this.categoryRepository.findOne(id);
+	  }
+
+	}

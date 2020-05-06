@@ -1,0 +1,6 @@
+package com.cms.dbmongo.resources;
+
+public class Snippet {
+	private static final Logger log = LoggerFactory.getLogger(CategoryResource.class);
+}
+

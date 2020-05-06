@@ -1,0 +1,9 @@
+package com.cms.dbmongo.models;
+
+public class Review {
+	
+	String uderId;
+	
+	String status;
+	
+}

@@ -1,0 +1,15 @@
+package com.cms.dbmongo.models;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Review {
+	
+	String uderId;
+	
+	String status;
+	
+}

@@ -1,0 +1,5 @@
+package com.cms.dbmongo.service;
+
+public class CategoryService {
+
+}
